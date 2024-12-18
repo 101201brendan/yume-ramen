@@ -1,0 +1,36 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    height: 75px;
+    border-bottom: 2px solid #212121;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    top: 0;
+    left: 0;
+    position: sticky;
+    z-index: 50;
+    background-color: #D32F2F;
+    padding: 0 10px 0 10px;
+    color: #212121;
+}
+
+.logo{
+    height: 75px;
+}
+
+.cart{
+    font-size: 50px;
+}
+
+.name-display{
+    width: 10rem;
+}
+
+main{
+    height: 1000px;
+    background-color: #;
+}
