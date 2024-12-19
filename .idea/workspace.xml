@@ -42,6 +42,12 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\school\LJ2\BEROEPS2\yume-ramen/css" />
+      <recent name="D:\school\LJ2\BEROEPS2\yume-ramen/js" />
+    </key>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -57,7 +63,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1734612015112</updated>
-      <workItem from="1734612016200" duration="1485000" />
+      <workItem from="1734612016200" duration="2224000" />
     </task>
     <servers />
   </component>
