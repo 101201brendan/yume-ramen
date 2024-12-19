@@ -34,19 +34,25 @@
 
     <!-- Example Products -->
     <div class="row">
-      <div class="col-md-4 mb-3">
-        <div class="card text-center">
-          <h5 class="card-title">Classic Ramen</h5>
-          <p class="card-text">$12.99</p>
+      <div class="col-md-4 mb-3 card ">
+        <div class="menu-container">
+          <img src="images/classic-ramen.jpg" alt="classic ramen">
+          <div class="text-center text-container">
+            <h5 class="card-title">Classic Ramen</h5>
+            <p class="card-text">$12.99</p>
+          </div>
+        </div>
           <button class="btn btn-success" onclick="addToCart('Classic Ramen', 12.99)">Add to Cart</button>
-        </div>
       </div>
-      <div class="col-md-4 mb-3">
-        <div class="card text-center">
-          <h5 class="card-title">Spicy Miso Ramen</h5>
-          <p class="card-text">$13.99</p>
-          <button class="btn btn-success" onclick="addToCart('Spicy Miso Ramen', 13.99)">Add to Cart</button>
+      <div class="col-md-4 mb-3 card ">
+        <div class="menu-container">
+          <img src="images/spicy-miso-ramen.jpg" alt="spicy miso ramen">
+          <div class="text-center text-container">
+            <h5 class="card-title">Spicy miso Ramen</h5>
+            <p class="card-text">$13.99</p>
+          </div>
         </div>
+          <button class="btn btn-success" onclick="addToCart('Spicy Miso Ramen', 13.99)">Add to Cart</button>
       </div>
     </div>
   </main>
@@ -54,6 +60,7 @@
   <!-- Footer -->
   <footer class="bottom-nav d-flex justify-content-around align-items-center fixed-bottom">
     <a href="index.html" class="active">Home</a>
+    <a href="menu.html">producten</a>
     <a href="menu.html">Menu</a>
     <a href="orders.html">Orders</a>
     <a href="account.html">Account</a>

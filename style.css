@@ -74,3 +74,24 @@ body {
   padding: 2px 6px;
   font-size: 12px;
 }
+
+.menu-container img{
+  width: 150px;
+  border: 2px solid black;
+}
+
+.menu-container{
+ 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+.text-container{
+  width: 48%;
+}
+
+.btn{
+  margin: 5px;
+}
