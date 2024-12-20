@@ -1,5 +1,7 @@
 <?php
 require 'db.php';
+session_start();
+
 include "classes/dish.php";
 
 try {

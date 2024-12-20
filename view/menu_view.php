@@ -32,20 +32,25 @@
 
 <!-- Main Content -->
 <main class="container mt-4">
-    <div class="row gy-3">
-        <!-- Menu Items -->
-        <div class="col-6 d-flex justify-content-center">
-            <div class="menu-item" onclick="addToCart('Ramen Bowl', 12.99)">🍜</div>
-        </div>
-        <div class="col-6 d-flex justify-content-center">
-            <div class="menu-item" onclick="addToCart('Sushi Roll', 8.99)">🍣</div>
-        </div>
-        <div class="col-6 d-flex justify-content-center">
-            <div class="menu-item" onclick="addToCart('Miso Soup', 4.99)">🥣</div>
-        </div>
-        <div class="col-6 d-flex justify-content-center">
-            <div class="menu-item" onclick="addToCart('Green Tea', 2.99)">🍵</div>
-        </div>
+    <h1><strong>Menu's</strong></h1>
+
+
+    <h1><strong>Ramen</strong></h1>
+    <div class="row p-2">
+        <?php
+        foreach ($dishes as $dish) {
+            ?>
+            <div class="col-md-4 mb-3 card">
+                <div class="menu-container">
+                    <img src="<?= htmlspecialchars($dish->imageUrl) ?>" alt="<?= htmlspecialchars($dish->dishName) ?>">
+                    <div class="text-center text-container">
+                        <h5 class="card-title"><?= htmlspecialchars($dish->dishName) ?></h5>
+                        <p class="card-text">€<?= htmlspecialchars($dish->price) ?></p>
+                    </div>
+                </div>
+                <button class="btn btn-success" onclick="addToCart('<?= addslashes($dish->dishName) ?>', <?= htmlspecialchars($dish->price) ?>)">Add to Cart</button>
+            </div>
+        <?php } ?>
     </div>
 </main>
 
@@ -53,7 +58,6 @@
 <footer class="bottom-nav d-flex justify-content-around align-items-center fixed-bottom">
     <a href="index.php">Home</a>
     <a href="#" class="active">producten</a>
-    <a href="menu.php">Menu</a>
     <a href="orders.php">Orders</a>
     <a href="account.php">Account</a>
 </footer>

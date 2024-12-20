@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home - Yume Ramen</title>
+    <title>Bestellingen - Yume Ramen</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <script src="js/cart.js" defer></script>
@@ -51,7 +51,6 @@
 <footer class="bottom-nav d-flex justify-content-around align-items-center fixed-bottom">
     <a href="index.php">Home</a>
     <a href="menu.php">producten</a>
-    <a href="menu.php">Menu</a>
     <a href="#" class="active">Orders</a>
     <a href="account.php">Account</a>
 </footer>
