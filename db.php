@@ -4,11 +4,17 @@ $username = "dbu101201";
 $password = "Hummer.anne.12";
 $database = "BEROEPS2_101201";
 
-// Maak verbinding
-$conn = new mysqli($servername, $username, $password, $database);
+try {
+    // Create a new PDO instance for the database connection
+    $pdo = new PDO("mysql:host=$servername;dbname=$database", $username, $password);
 
-// Controleer de verbinding
-if ($conn->connect_error) {
-    die("Verbinding mislukt: " . $conn->connect_error);
+    // Set the PDO error mode to exception
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+    // You can optionally check if the connection was successful
+    // echo "Connected successfully";
+} catch (PDOException $e) {
+    echo "Connection failed: " . $e->getMessage();
+    exit; // Exit if the connection fails
 }
-echo "Verbonden met de database!";
+?>

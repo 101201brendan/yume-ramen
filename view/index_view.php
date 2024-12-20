@@ -38,39 +38,20 @@
 
     <!-- Example Products -->
     <div class="row p-2">
-        <div class="col-md-4 mb-3 card ">
-            <div class="menu-container">
-                <img src="images/classic-ramen.jpg" alt="classic ramen">
-                <div class="text-center text-container">
-                    <h5 class="card-title">Classic Ramen</h5>
-                    <p class="card-text">$12.99</p>
+        <?php
+            foreach ($dishes as $dish) {
+                ?>
+                <div class="col-md-4 mb-3 card">
+                    <div class="menu-container">
+                        <img src="<?= htmlspecialchars($dish->imageUrl) ?>" alt="<?= htmlspecialchars($dish->dishName) ?>">
+                        <div class="text-center text-container">
+                            <h5 class="card-title"><?= htmlspecialchars($dish->dishName) ?></h5>
+                            <p class="card-text">€<?= htmlspecialchars($dish->price) ?></p>
+                        </div>
+                    </div>
+                    <button class="btn btn-success" onclick="addToCart('<?= addslashes($dish->dishName) ?>', <?= htmlspecialchars($dish->price) ?>)">Add to Cart</button>
                 </div>
-            </div>
-            <button class="btn btn-success" onclick="addToCart('Classic Ramen', 12.99)">Add to Cart</button>
-        </div>
-
-        <div class="col-md-4 mb-3 card ">
-            <div class="menu-container">
-                <img src="images/spicy-miso-ramen.jpg" alt="spicy miso ramen">
-                <div class="text-center text-container">
-                    <h5 class="card-title">Spicy miso Ramen</h5>
-                    <p class="card-text">$13.99</p>
-                </div>
-            </div>
-            <button class="btn btn-success" onclick="addToCart('Spicy Miso Ramen', 13.99)">Add to Cart</button>
-        </div>
-
-        <div class="col-md-4 mb-3 card ">
-            <div class="menu-container">
-                <img src="images/spicy-miso-ramen.jpg" alt="spicy miso ramen">
-                <div class="text-center text-container">
-                    <h5 class="card-title">Spicy miso Ramen</h5>
-                    <p class="card-text">$13.99</p>
-                </div>
-            </div>
-            <button class="btn btn-success" onclick="addToCart('Spicy Miso Ramen', 13.99)">Add to Cart</button>
-        </div>
-
+                <?php } ?>
     </div>
 </main>
 
