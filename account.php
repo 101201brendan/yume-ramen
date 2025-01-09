@@ -2,7 +2,7 @@
 session_start(); // Start de sessie
 require 'db.php'; // Maak verbinding met de database
 include 'classes/account.php'; // Zorg ervoor dat de accountklasse wordt ingeladen
-
+ 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $email = $_POST['email'];
     $password = $_POST['PasswordHash'];
