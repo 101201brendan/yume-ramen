@@ -73,9 +73,11 @@ body {
 }
 
 .menu-container img {
-  width: 150px;
+  max-height: 120px;
+  aspect-ratio: 3 / 2;
   border: 2px solid black;
 }
+
 
 .menu-container {
   display: flex;

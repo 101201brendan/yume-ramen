@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>menus - Yume Ramen</title>
+    <title>Menu's - Yume Ramen</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <script src="js/cart.js" defer></script>
@@ -34,23 +34,76 @@
 <main class="container mt-4">
     <h1><strong>Menu's</strong></h1>
 
-
     <h1><strong>Ramen</strong></h1>
     <div class="row p-2">
-        <?php
-        foreach ($dishes as $dish) {
-            ?>
-            <div class="col-md-4 mb-3 card">
-                <div class="menu-container">
-                    <img src="<?= htmlspecialchars($dish->imageUrl) ?>" alt="<?= htmlspecialchars($dish->dishName) ?>">
-                    <div class="text-center text-container">
-                        <h5 class="card-title"><?= htmlspecialchars($dish->dishName) ?></h5>
-                        <p class="card-text">€<?= htmlspecialchars($dish->price) ?></p>
+        <?php foreach ($dishes as $dish): ?>
+            <?php if ($dish->category === 'ramen'): ?>
+                <div class="col-md-4 mb-3 card">
+                    <div class="menu-container">
+                        <img src="<?= htmlspecialchars($dish->imageUrl) ?>" alt="<?= htmlspecialchars($dish->dishName) ?>">
+                        <div class="text-center text-container">
+                            <h5 class="card-title"><?= htmlspecialchars($dish->dishName) ?></h5>
+                            <p class="card-text">€<?= htmlspecialchars($dish->price) ?></p>
+                        </div>
                     </div>
+                    <button class="btn btn-success" onclick="addToCart('<?= addslashes($dish->dishName) ?>', <?= htmlspecialchars($dish->price) ?>)">Add to Cart</button>
                 </div>
-                <button class="btn btn-success" onclick="addToCart('<?= addslashes($dish->dishName) ?>', <?= htmlspecialchars($dish->price) ?>)">Add to Cart</button>
-            </div>
-        <?php } ?>
+            <?php endif; ?>
+        <?php endforeach; ?>
+    </div>
+
+    <h1><strong>Side dishes</strong></h1>
+    <div class="row p-2">
+        <?php foreach ($dishes as $dish): ?>
+            <?php if ($dish->category === 'Sides'): ?>
+                <div class="col-md-4 mb-3 card">
+                    <div class="menu-container">
+                        <img src="<?= htmlspecialchars($dish->imageUrl) ?>" alt="<?= htmlspecialchars($dish->dishName) ?>">
+                        <div class="text-center text-container">
+                            <h5 class="card-title"><?= htmlspecialchars($dish->dishName) ?></h5>
+                            <p class="card-text">€<?= htmlspecialchars($dish->price) ?></p>
+                        </div>
+                    </div>
+                    <button class="btn btn-success" onclick="addToCart('<?= addslashes($dish->dishName) ?>', <?= htmlspecialchars($dish->price) ?>)">Add to Cart</button>
+                </div>
+            <?php endif; ?>
+        <?php endforeach; ?>
+    </div>
+
+    <h1><strong>Desserts</strong></h1>
+    <div class="row p-2">
+        <?php foreach ($dishes as $dish): ?>
+            <?php if ($dish->category === 'Desserts'): ?>
+                <div class="col-md-4 mb-3 card">
+                    <div class="menu-container">
+                        <img src="<?= htmlspecialchars($dish->imageUrl) ?>" alt="<?= htmlspecialchars($dish->dishName) ?>">
+                        <div class="text-center text-container">
+                            <h5 class="card-title"><?= htmlspecialchars($dish->dishName) ?></h5>
+                            <p class="card-text">€<?= htmlspecialchars($dish->price) ?></p>
+                        </div>
+                    </div>
+                    <button class="btn btn-success" onclick="addToCart('<?= addslashes($dish->dishName) ?>', <?= htmlspecialchars($dish->price) ?>)">Add to Cart</button>
+                </div>
+            <?php endif; ?>
+        <?php endforeach; ?>
+    </div>
+
+    <h1><strong>Drinks</strong></h1>
+    <div class="row p-2">
+        <?php foreach ($dishes as $dish): ?>
+            <?php if ($dish->category === 'Drinks'): ?>
+                <div class="col-md-4 mb-3 card">
+                    <div class="menu-container">
+                        <img src="<?= htmlspecialchars($dish->imageUrl) ?>" alt="<?= htmlspecialchars($dish->dishName) ?>">
+                        <div class="text-center text-container">
+                            <h5 class="card-title"><?= htmlspecialchars($dish->dishName) ?></h5>
+                            <p class="card-text">€<?= htmlspecialchars($dish->price) ?></p>
+                        </div>
+                    </div>
+                    <button class="btn btn-success" onclick="addToCart('<?= addslashes($dish->dishName) ?>', <?= htmlspecialchars($dish->price) ?>)">Add to Cart</button>
+                </div>
+            <?php endif; ?>
+        <?php endforeach; ?>
     </div>
 </main>
 
@@ -62,5 +115,4 @@
     <a href="account.php">Account</a>
 </footer>
 </body>
-
 </html>

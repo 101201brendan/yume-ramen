@@ -5,8 +5,8 @@ session_start();
 include "classes/dish.php";
 
 try {
-    // Your database query and object creation code
-    $sql = "SELECT * FROM Dishes WHERE Category = 'Ramen'";
+    // Haal alle gerechten op
+    $sql = "SELECT * FROM Dishes";
     $stmt = $pdo->query($sql);
 
     $dishes = [];
@@ -22,10 +22,8 @@ try {
         $dishes[] = $dish;
     }
 
-    // Ensure that there are no extra closing braces here
 } catch (PDOException $e) {
     echo "Error: " . $e->getMessage();
 }
-
 
 include "view/menu_view.php";

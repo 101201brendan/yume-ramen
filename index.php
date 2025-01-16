@@ -22,6 +22,7 @@ try {
         $dishes[] = $dish;
     }
 
+
     // Ensure that there are no extra closing braces here
 } catch (PDOException $e) {
     echo "Error: " . $e->getMessage();
