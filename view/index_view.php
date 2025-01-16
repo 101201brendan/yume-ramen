@@ -35,8 +35,10 @@
 
     <h2 class="margin-auto">Welcome to Yume Ramen</h2>
     <marquee>Explore our delicious ramen and sushi!</marquee>
+    <img class="banner" src="images/background/banner.jpg" alt="banner">
 
     <!-- Example Products -->
+    <h2>discover our delicious products</h2>
     <div class="row p-2">
         <?php
             foreach ($dishes as $dish) {
