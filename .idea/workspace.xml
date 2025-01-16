@@ -5,12 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8f5d3d8d-2be8-49c4-aea3-3c926d5aeb8f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/logout.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/account.php" beforeDir="false" afterPath="$PROJECT_DIR$/account.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/account.php" beforeDir="false" afterPath="$PROJECT_DIR$/classes/Account.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/registreer.php" beforeDir="false" afterPath="$PROJECT_DIR$/registreer.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/view/account_view.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/account_view.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/index_view.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/index_view.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/menu_view.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/menu_view.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/orders_view.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/orders_view.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,7 +83,7 @@
       <workItem from="1734697936738" duration="300000" />
       <workItem from="1734698662445" duration="3332000" />
       <workItem from="1736929222993" duration="3122000" />
-      <workItem from="1737020200423" duration="8357000" />
+      <workItem from="1737020200423" duration="8772000" />
     </task>
     <servers />
   </component>
