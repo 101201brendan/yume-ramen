@@ -6,7 +6,7 @@ include "classes/dish.php";
 
 try {
     // Your database query and object creation code
-    $sql = "SELECT * FROM Dishes WHERE Category = 'Ramen'";
+    $sql = "SELECT * FROM Dishes WHERE Category = 'Menu'";
     $stmt = $pdo->query($sql);
 
     $dishes = [];

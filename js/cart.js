@@ -1,5 +1,3 @@
-// cart.js
-
 // Initialize cart from localStorage or empty array
 let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
@@ -43,7 +41,7 @@ function updateCart() {
 
   let totalQuantity = 0;
 
-  cart.forEach(item => {
+  cart.forEach((item, index) => {
     totalQuantity += item.quantity;
 
     const cartItem = document.createElement('div');
@@ -51,11 +49,35 @@ function updateCart() {
     cartItem.innerHTML = `
       <span>${item.name} (x${item.quantity})</span>
       <span>$${(item.price * item.quantity).toFixed(2)}</span>
+      <button class="edit-btn" onclick="editItem(${index}, 'increase')">+</button>
+      <button class="edit-btn" onclick="editItem(${index}, 'decrease')">-</button>
+      <button class="remove-btn" onclick="removeItem(${index})">Remove</button>
     `;
     cartItemsContainer.appendChild(cartItem);
   });
 
   cartBadge.innerText = totalQuantity;
+}
+
+// Edit item quantity
+function editItem(index, action) {
+  if (action === 'increase') {
+    cart[index].quantity += 1;
+  } else if (action === 'decrease') {
+    cart[index].quantity -= 1;
+    if (cart[index].quantity <= 0) {
+      cart.splice(index, 1); // Remove item if quantity is 0
+    }
+  }
+  updateCart();
+  saveCart();
+}
+
+// Remove item from cart
+function removeItem(index) {
+  cart.splice(index, 1); // Remove item by index
+  updateCart();
+  saveCart();
 }
 
 // Checkout function
