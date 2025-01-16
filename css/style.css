@@ -116,3 +116,8 @@ header {
 .margin-auto{
   text-align: center;
 }
+
+.contact-card{
+  border: 3px darkgray;
+  border-radius: 3px;
+}
