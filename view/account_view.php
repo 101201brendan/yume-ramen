@@ -76,7 +76,7 @@
 <footer class="bottom-nav d-flex justify-content-around align-items-center fixed-bottom">
     <a href="index.php">Home</a>
     <a href="menu.php">Menu</a>
-    <a href="orders.php">Bestellingen</a>
+    <a href="orders.php">Orders</a>
     <a href="#" class="active">Account</a>
 </footer>
 </body>
