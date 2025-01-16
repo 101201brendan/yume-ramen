@@ -35,8 +35,10 @@
 
     <h2 class="margin-auto">Welcome to Yume Ramen</h2>
     <marquee>Explore our delicious ramen and sushi!</marquee>
+    <img class="banner" src="images/background/banner.jpg" alt="banner">
 
     <!-- Example Products -->
+    <h2>discover our delicious products</h2>
     <div class="row p-2">
         <?php
             foreach ($dishes as $dish) {
@@ -58,7 +60,7 @@
 <!-- Footer -->
 <footer class="bottom-nav d-flex justify-content-around align-items-center fixed-bottom">
     <a href="#" class="active">Home</a>
-    <a href="menu.php">producten</a>
+    <a href="menu.php">products</a>
     <a href="orders.php">Orders</a>
     <a href="contact.php">Contact</a>
     <a href="account.php">Account</a>

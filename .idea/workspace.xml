@@ -5,14 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8f5d3d8d-2be8-49c4-aea3-3c926d5aeb8f" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/images/background/Dark_Wood_Shoji_Screen_Wallpaper.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/background/banner.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/classes/dish.php" beforeDir="false" afterPath="$PROJECT_DIR$/classes/dish.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/side-dish/gyoza.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/images/side-dish/Gyoza.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/side-dish/karaage.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/images/side-dish/Karaage.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/menu.php" beforeDir="false" afterPath="$PROJECT_DIR$/menu.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/view/menu_view.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/menu_view.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/view/index_view.php" beforeDir="false" afterPath="$PROJECT_DIR$/view/index_view.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,6 +53,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\school\LJ2\BEROEPS2\yume-ramen\images\background" />
       <recent name="D:\school\LJ2\BEROEPS2\yume-ramen/css" />
       <recent name="D:\school\LJ2\BEROEPS2\yume-ramen/js" />
     </key>
@@ -87,7 +86,7 @@
       <workItem from="1734697936738" duration="300000" />
       <workItem from="1734698662445" duration="3332000" />
       <workItem from="1736929222993" duration="3122000" />
-      <workItem from="1737020200423" duration="2337000" />
+      <workItem from="1737020200423" duration="11242000" />
     </task>
     <servers />
   </component>

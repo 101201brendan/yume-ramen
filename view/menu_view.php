@@ -33,6 +33,22 @@
 <!-- Main Content -->
 <main class="container mt-4">
     <h1><strong>Menu's</strong></h1>
+    <div class="row p-2">
+        <?php foreach ($dishes as $dish): ?>
+            <?php if ($dish->category === 'Menu'): ?>
+                <div class="col-md-4 mb-3 card">
+                    <div class="menu-container">
+                        <img src="<?= htmlspecialchars($dish->imageUrl) ?>" alt="<?= htmlspecialchars($dish->dishName) ?>">
+                        <div class="text-center text-container">
+                            <h5 class="card-title"><?= htmlspecialchars($dish->dishName) ?></h5>
+                            <p class="card-text">€<?= htmlspecialchars($dish->price) ?></p>
+                        </div>
+                    </div>
+                    <button class="btn btn-success" onclick="addToCart('<?= addslashes($dish->dishName) ?>', <?= htmlspecialchars($dish->price) ?>)">Add to Cart</button>
+                </div>
+            <?php endif; ?>
+        <?php endforeach; ?>
+    </div>
 
     <h1><strong>Ramen</strong></h1>
     <div class="row p-2">
@@ -110,7 +126,7 @@
 <!-- Footer -->
 <footer class="bottom-nav d-flex justify-content-around align-items-center fixed-bottom">
     <a href="index.php">Home</a>
-    <a href="#" class="active">producten</a>
+    <a href="#" class="active">products</a>
     <a href="orders.php">Orders</a>
     <a href="contact.php" >Contact</a>
     <a href="account.php">Account</a>

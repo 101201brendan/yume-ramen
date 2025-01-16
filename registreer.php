@@ -1,6 +1,6 @@
 <?php
 require 'db.php'; // Zorg ervoor dat je de databaseverbinding hebt
-include 'classes/account.php'; // Zorg ervoor dat de accountklasse wordt ingeladen
+include 'classes/Account.php'; // Zorg ervoor dat de accountklasse wordt ingeladen
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     // Verkrijg formulierinvoer
@@ -22,7 +22,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     if ($stmt->execute()) {
         echo "Account succesvol aangemaakt!";
-        header("Location: account.php"); // Stuur door naar de loginpagina
+        header("Location: Account.php"); // Stuur door naar de loginpagina
         exit;
     } else {
         echo "Er is een fout opgetreden bij het aanmaken van het account.";
