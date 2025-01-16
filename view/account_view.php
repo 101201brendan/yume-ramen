@@ -10,7 +10,7 @@
 </head>
 <body>
 <!-- Header -->
-<header class=" bg-light position-relative">
+<header class="bg-light position-relative">
     <a href="index.html">
         <img class="logo-header" src="images/logo/logo.png" alt="logo yume-ramen">
     </a>
@@ -33,42 +33,51 @@
 <main class="container text-center mt-4">
 
     <?php
-    if (!isset($_SESSION['user_id'])) { ?>
-            
+    // Controleer of de gebruiker is ingelogd
+    if (isset($_SESSION['user_id'])) {
+        // Als de gebruiker is ingelogd, toon de accountinformatie
+        ?>
+        <h2>Welkom, <?= $_SESSION["fName"] ?> <?= $_SESSION["lName"] ?></h2>
+        <p>Email: <?= $_SESSION["email"] ?></p>
+        <p>Adres: <?= $_SESSION['postcode'] ?> <?= $_SESSION['street'] ?> <?= $_SESSION['houseNum'] ?></p>
+
+
+        <button class="btn btn-outline-secondary w-100 my-2">Bewerk informatie</button>
+
+        <!-- Log uit formulier -->
+        <form action="logout.php" method="POST">
+            <button class="btn btn-outline-dark w-100 my-2" type="submit">Log uit</button>
+        </form>
+
+        <?php
+    } else {
+        // Als de gebruiker niet ingelogd is, toon het inlogformulier
+        ?>
         <h2>Login</h2>
         <form action="account.php" method="POST">
-            <label for="email">Username:</label>
+            <label for="email">E-mailadres:</label>
             <input type="text" id="email" name="email" required>
             <br><br>
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="PasswordHash" required>
+            <label for="password">Wachtwoord:</label>
+            <input type="password" id="password" name="password" required>
             <br><br>
-            <button class="btn btn-primary w-100 my-2" type="submit">Login</button>
+            <button class="btn btn-primary w-100 my-2" type="submit">Inloggen</button>
         </form>
 
         <button class="btn btn-outline-dark w-100 my-2" onclick="window.location.href='registreer.php'" type="submit">Registreer</button>
 
-<?php } else {?>
-        <div class="profile-pic"></div>
-        <h5>Name</h5>
-        <p>Email: example@example.com</p>
-        <p>Address: Example Street</p>
-
-        <button class="btn btn-outline-secondary w-100 my-2">Edit Information</button>
-        <button class="btn btn-outline-dark w-100 my-2">Log Out</button>
-        <button class="btn btn-danger w-100 my-2">Delete Account</button>
-
-<?php } ?>
+        <?php
+    }
+    ?>
 
 </main>
 
 <!-- Footer -->
 <footer class="bottom-nav d-flex justify-content-around align-items-center fixed-bottom">
     <a href="index.php">Home</a>
-    <a href="menu.php">producten</a>
-    <a href="orders.php">Orders</a>
+    <a href="menu.php">Menu</a>
+    <a href="orders.php">Bestellingen</a>
     <a href="#" class="active">Account</a>
 </footer>
 </body>
-
 </html>
