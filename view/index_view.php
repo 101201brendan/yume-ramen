@@ -62,6 +62,7 @@
     <a href="#" class="active">Home</a>
     <a href="menu.php">products</a>
     <a href="orders.php">Orders</a>
+    <a href="contact.php">Contact</a>
     <a href="account.php">Account</a>
 </footer>
 </body>

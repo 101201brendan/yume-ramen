@@ -33,6 +33,9 @@
 <main class="container text-center mt-4">
 
     <?php
+
+    if (!isset($_SESSION['user_id'])) { 
+
     // Controleer of de gebruiker is ingelogd
     if (isset($_SESSION['user_id'])) {
         // Als de gebruiker is ingelogd, toon de accountinformatie
@@ -53,6 +56,7 @@
     } else {
         // Als de gebruiker niet ingelogd is, toon het inlogformulier
         ?>
+
         <h2>Login</h2>
         <form action="account.php" method="POST">
             <label for="email">E-mailadres:</label>
@@ -77,6 +81,7 @@
     <a href="index.php">Home</a>
     <a href="menu.php">Menu</a>
     <a href="orders.php">Orders</a>
+    <a href="contact.php" >Contact</a>
     <a href="#" class="active">Account</a>
 </footer>
 </body>
