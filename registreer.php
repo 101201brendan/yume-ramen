@@ -10,10 +10,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $password = $_POST['password'];
 
     // Wachtwoord hashen
-    $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
+//    $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 
     // Voeg het account toe aan de database
-    $sql = "INSERT INTO Users (email, first_name, last_name, password) VALUES (:email, :fName, :lName, :password)";
+    $sql = "INSERT INTO Users (Email, Firstname, Lastname, passwordHash) VALUES (:email, :fName, :lName, :password)";
     $stmt = $pdo->prepare($sql);
     $stmt->bindParam(':email', $email);
     $stmt->bindParam(':fName', $fName);
